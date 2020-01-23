@@ -11,11 +11,11 @@ import { useDispatch } from "react-redux";
 
 import Colors from "../constants/Colors";
 import * as placesActions from "../store/places-actions";
-import ImagePicker from '../components/ImagePicker';
+import ImagePicker from "../components/ImagePicker";
 
 const NewPlaceScreen = props => {
   const [titleValue, setTitleValue] = useState("");
-  const [selectedImage, setSelectedImage] = useState()
+  const [selectedImage, setSelectedImage] = useState();
 
   const dispatch = useDispatch();
 
@@ -26,7 +26,7 @@ const NewPlaceScreen = props => {
 
   const imageTakenHandler = imagePath => {
     setSelectedImage(imagePath);
-  }
+  };
 
   const savePlaceHandler = () => {
     dispatch(placesActions.addPlace(titleValue, selectedImage));
