@@ -9,8 +9,12 @@ const MapScreen = props => {
     latitudeDelta: 0.0922,
     longitudeDelta: 0.0421,
   }
+
+  const selectLocationHandler = event => {
+    console.log(event);
+  }
   return (
-    <MapView style={styles.map} region={mapRegion}/>
+    <MapView style={styles.map} region={mapRegion} onPress={selectLocationHandler}/>
   );
 };
 
